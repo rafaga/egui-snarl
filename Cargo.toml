@@ -17,7 +17,6 @@ egui_extras = { version = "0.37" }
 syn = { version = "3" }
 serde = { version = "1" }
 serde_json = { version = "1" }
-
 egui-probe = { version = "0.14.0" }
 egui-scale = { version = "0.7.0" }
 wasm-bindgen-futures = "0.4"
@@ -61,3 +60,7 @@ wasm-bindgen-futures.workspace = true
 [[example]]
 name = "demo"
 required-features = ["serde", "egui-probe"]
+
+[patch.crates-io]
+egui-probe = { git = "https://github.com/rafaga/egui-probe", branch = "egui-0.37" }
+egui-scale = { git = "https://github.com/rafaga/egui-scale", branch = "egui-0.37" }
